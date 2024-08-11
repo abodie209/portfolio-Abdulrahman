@@ -7,6 +7,59 @@
     --padding: 8%;
 }
 
+/* الزر الخاص بفتح القائمة */
+.menu-toggle {
+    font-size: 1.8rem;
+    background: none;
+    color: var(--lightcolor);
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+/* القائمة الجانبية على الشاشات الصغيرة */
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* إخفاء القائمة الجانبية افتراضيًا */
+.menu.hidden {
+    display: none;
+}
+
+/* تحويل القائمة الجانبية إلى شريط جانبي على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bgcolor-1);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu ul li {
+        margin: 1rem 0;
+    }
+
+    .menu-toggle {
+        display: inline-block;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
