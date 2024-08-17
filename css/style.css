@@ -873,9 +873,15 @@ footer .end {
         flex: 1 1 auto; }
 }
 
-/* إخفاء العنصر .contalner-images عند صغر حجم الشاشة */
+ .contalner-images
 @media (max-width: 768px) {
     .contalner-images {
-        display: none; /* إخفاء العنصر */
+        display: none; 
+    }
+}
+
+@media (max-width: 768px {
+    body {
+        flex-basis : 100%;
     }
 }
